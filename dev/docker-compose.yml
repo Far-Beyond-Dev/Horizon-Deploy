@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  # Later on we will deploy Maestro here and require a config file in this directory.
+  # The config file will be mounted as a volume to the Maestro container, and describe
+  # the desired network topology
+  horizon-game-server:
+    build: ../../Horizon-Community-Edition/
+    ports:
+      - "3030:3030"
+    environment:
+      - ENV=production
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
