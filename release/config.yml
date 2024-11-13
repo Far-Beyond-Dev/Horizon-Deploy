@@ -1,3 +1,7 @@
+# This is the config file for Horizon Game server, to modify it simply edit
+# and save, then rerun the up script to update any running servers to the new
+# config.
+
 players_per_pool: 5000
 num_thread_pools: 64
 log_level: "INFO"
